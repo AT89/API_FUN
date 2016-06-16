@@ -61,9 +61,12 @@ $(document).ready(function(){
   $(window).scroll(function() {
      if($(window).scrollTop() + $(window).height() == $(document).height()) {
            $("html, body").animate({ scrollTop: 0 }, "slow");
+           //if page 1..
+           clearImg();
            target = target.replace("/.json?","/#page="+page+"/.json?");
            retrieveImg();
            page++;
+           //else split and then add page + .json
      }
 // use "http://accesscontrolalloworiginall.herokuapp.com/"; before to access.. overcomes API obstacle
 //      demoString = "Jack's birthday is 8/22";
